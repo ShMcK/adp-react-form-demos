@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { saveForm } from '../actions';
 
-class ReduxForm extends Component {
+class ReduxFormSave extends Component {
   render() {
     const { handleSubmit, onSaveForm, savedInput } = this.props;
     return (
@@ -16,9 +16,9 @@ class ReduxForm extends Component {
             component="input"
             type="text"
           />
-        <p>Saved: {savedInput}</p>
           <button type="submit">Submit</button>
         </form>
+        <p>Saved: {savedInput}</p>
 
         <p>Redux-Form updates the store with the form state.</p>
       </div>
@@ -34,7 +34,7 @@ const mapDispatchToProps = {
   onSaveForm: saveForm,
 };
 
-ReduxForm = reduxForm({ form: 'form2' })(ReduxForm);
-ReduxForm = connect(mapStateToProps, mapDispatchToProps)(ReduxForm);
+ReduxFormSave = reduxForm({ form: 'form2' })(ReduxFormSave);
+ReduxFormSave = connect(mapStateToProps, mapDispatchToProps)(ReduxFormSave);
 
-export default ReduxForm;
+export default ReduxFormSave;

@@ -2,7 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import ReduxFormSimple from './ReduxFormSimple';
-import ReduxSaveForm from './ReduxSaveForm';
+import ReduxFormSave from './ReduxFormSave';
+import ReduxFormValidation from './ReduxFormValidation';
 
 import store from './store';
 
@@ -12,7 +13,8 @@ class ReduxFormExamples extends React.Component {
       <Provider store={store}>
         <div className="container row">
           <ReduxFormSimple />
-          <ReduxSaveForm />
+          <ReduxFormSave />
+          <ReduxFormValidation />
         </div>
       </Provider>
     );
