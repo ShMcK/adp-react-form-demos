@@ -9,7 +9,7 @@ class ControlledForm extends Component {
   }
   handleChange(event) {
     const value = event.target.value;
-    console.log(value);
+    // console.log(value);
     this.setState({
       value
     });
