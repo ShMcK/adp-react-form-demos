@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ControlledForm from './ControlledForm';
+import ExpectedForm from './ExpectedForm';
 import UncontrolledForm from './UncontrolledForm';
 import './index.css';
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <ControlledForm />
+      <div className="container row">
+        <ExpectedForm />
         <UncontrolledForm />
+        <ControlledForm />
       </div>
     );
   }
