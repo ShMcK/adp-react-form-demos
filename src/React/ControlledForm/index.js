@@ -22,13 +22,13 @@ class ControlledForm extends Component {
     return (
       <div className="container col-md-4">
         <h1>Controlled</h1>
-        <form>
+        <form onSubmit={this.onSubmit.bind(this)}>
           <input
             type="text"
             value={this.state.value}
             onChange={this.handleChange.bind(this)}
           />
-          <button onClick={this.onSubmit.bind(this)}>Submit</button>
+        <button type="submit">Submit</button>
         </form>
 
         <p>This form calls a function to update the component state on each change.</p>

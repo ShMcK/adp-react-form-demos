@@ -9,13 +9,13 @@ class ExpectedForm extends Component {
     return (
       <div className="container col-md-4">
         <h1>Expected</h1>
-        <form>
+        <form onSubmit={this.onSubmit.bind(this)}>
           <input
             ref="input"
             type="text"
             value="expected"
           />
-          <button onClick={this.onSubmit.bind(this)}>Submit</button>
+          <button type="submit">Submit</button>
         </form>
 
         <p>This input will not update. Why?</p>
